@@ -2,7 +2,7 @@ Streaming Bot - Billboard Hot 100 Competition Bot
 =================================================
 A fully functioning competition chat bot. It reads from a JSON data file, randomly compiles from 1 of 3 possible question types, generates a random question and answers then starts. Competition is rendered in a local HTML file (no need for a web server) which can be rendered on an OBS stream.
 
-Every x minutes a competition triggers. Users have 3 possible answers to choose from. They select an answer in main chat by shouting !1, !2 or !3. Each player has 1 chance per question and can't change their answer.
+Every x seconds (3 minutes default) a competition triggers with a generated HTML to display on a stream. The question could be announced in chat, but we should try to keep that clean. Users have 3 possible answers to choose from. They select an answer in main chat by shouting !1, !2 or !3. Each player has 1 chance per question and can't change their answer. After x seconds (default 10) the competition ends and the HTML changes to a results page. After x seconds (default 10) the results page is removed and nothing is displayed in the HTML so it can remain onscreen until the next competition.
 
 Can be adapted to any data set for any quiz but will require a lot of configuration.
 
