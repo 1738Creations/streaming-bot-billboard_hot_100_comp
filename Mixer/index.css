@@ -1,0 +1,193 @@
+body {
+	background-color: rgb(255,255,255,0);
+	font-family: arial;
+}
+
+h1 {
+	color: white;
+	text-align: center;
+}
+
+p {
+	margin: 0px;
+	padding: 0px;
+	font-size: 20px;
+}
+
+/*GENERIC AREAS*/
+.QuizArea {
+	width: 92%;
+	margin: 10px auto;
+	font-weight: normal;
+}
+
+.QuestionArea {
+	background-color: rgba(60,60,60,0.8);
+	color: rgba(240, 240, 240);
+	font-weight: normal;
+	text-align: left;
+}
+
+.QuestionArea p {
+	padding: 4px;
+	text-align: left;
+}
+
+#BBHeader {
+	padding-bottom: 2px;
+	padding-top: 2px;
+	background-color: rgba(255,60,60,0.8);
+	color: rgba(240, 240, 240);
+	font-weight: bold;
+	text-align: center;
+}
+
+
+/*QUESTION AREA*/
+#MasterQuestionContainer {
+	background-color: rgba(0,0,0,0.6);
+	border: solid rgba(0,0,0,0.2) 0.2px;
+	width: 370;
+	height: auto;
+	position: absolute;
+	visibility: /*q-vis*/hidden/*/q-vis*/;
+}
+
+#QuestionContainer {
+	padding: 10px;
+}
+
+.AnswerAreaMain {
+	margin-top : 10px;
+}
+
+.AnswerArea p {
+	padding: 4px;
+	text-align: left;
+}
+
+.AnswerAreaLeft {
+	width: 24px;
+	vertical-align: top;
+}
+
+.AnswerAreaLeftInner {
+	background-color: rgba(242,224,73,1);
+	text-align: center;
+	font-weight: normal;
+	padding: 3px;
+	margin: 0px;
+}
+
+.AnswerAreaMid {
+	background: rgba(0,0,0,0);
+	width: 2px;
+}
+
+.AnswerAreaRight {
+	background-color: rgba(242,224,73,1);
+	padding: 3px;
+	width: 278px;
+	vertical-align: top;
+}
+
+
+/*RESULTS AREA*/
+#MasterResultsContainer {
+	background-color: rgba(0,0,0,0.6);
+	border: solid rgba(0,0,0,0.2) 0.2px;
+	width: 370;
+	height: auto;
+	position: absolute;
+	visibility: /*r-vis*/hidden/*/r-vis*/;
+}
+
+#ResultsContainer {
+	padding: 10px;
+}
+
+.ResultsAnswerAreaLeft {
+	width: 24px;
+	vertical-align: top;
+}
+
+.ResultsAnswerAreaMid {
+	background: rgba(0,0,0,0);
+	width: 2px;
+}
+
+#TheAnswer1 {
+	text-decoration: /*r-a1st*/none/*/r-a1st*/;
+}
+#TheAnswer1 .ResultsAnswerAreaRight {
+	background-color: /*r-a1c*/rgba(73,242,109,1)/*/r-a1c*/;
+	padding: 3px;
+	width: 278px;
+	vertical-align: top;
+}
+#TheAnswer1 .ResultsAnswerAreaLeftInner {
+	background-color: /*r-a1c2*/rgba(73,242,109,1)/*/r-a1c2*/;
+	text-align: center;
+	font-weight: normal;
+	padding: 3px;
+	margin: 0px;
+}
+
+#TheAnswer2 {
+	text-decoration: /*r-a2st*/line-through/*/r-a2st*/;
+}
+#TheAnswer2 .ResultsAnswerAreaRight {
+	background-color: /*r-a2c*/rgba(242,224,73,0.5)/*/r-a2c*/;
+	padding: 3px;
+	width: 278px;
+	vertical-align: top;
+}
+#TheAnswer2 .ResultsAnswerAreaLeftInner {
+	background-color: /*r-a2c2*/rgba(242,224,73,0.5)/*/r-a2c2*/;
+	text-align: center;
+	font-weight: normal;
+	padding: 3px;
+	margin: 0px;
+}
+
+#TheAnswer3 {
+	text-decoration: /*r-a3st*/line-through/*/r-a3st*/;
+}
+#TheAnswer3 .ResultsAnswerAreaRight {
+	background-color: /*r-a3c*/rgba(242,224,73,0.5)/*/r-a3c*/;
+	padding: 3px;
+	width: 278px;
+	vertical-align: top;
+}
+#TheAnswer3 .ResultsAnswerAreaLeftInner {
+	background-color: /*r-a3c2*/rgba(242,224,73,0.5)/*/r-a3c2*/;
+	text-align: center;
+	font-weight: normal;
+	padding: 3px;
+	margin: 0px;
+}
+
+
+/*INFO and RESULTS AREAS*/
+.LowerAreaInfo {
+	margin-top: 10px;
+	background-color: rgba(60,60,60,0.8);
+	color: rgba(240, 240, 240);
+	font-weight: normal;
+	text-align: left;
+	font-style: italic;
+}
+.LowerAreaInfo p {
+	padding: 4px;
+	text-align: left;
+}
+
+.LowerAreaResults {
+	margin-top: 10px;
+	background-color: rgba(73,242,109,1);
+	font-weight: normal;
+	text-align: center;
+}
+.LowerAreaResults p {
+	padding: 4px;
+}

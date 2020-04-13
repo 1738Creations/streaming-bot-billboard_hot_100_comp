@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html>
+
+<title>BB Quiz Bot</title>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script type="text/javascript" src="index.js"></script>
+	<!-- without this refresh OBS will never update -->
+	<META HTTP-EQUIV="refresh" CONTENT="1">
+</head>
+
+<!-- OBS default overrides background with transparency. We'll copy this functionality in the css just in case it stops one day -->
+
+<body>
+
+<!-- Max size of this div should 370x650. Match this in OBS. Then we can set the height to wrap to contents, which should never go below 650 but look as though it's resizing correctly in OBS  -->
+
+<!-- Question area -->
+
+<div id="MasterQuestionContainer">
+	<div id="QuestionContainer">
+		<div id="BBHeader">
+			<p>BILLBOARD HOT 100 QUIZ BOT</p>
+		</div>
+		
+		<div class="QuizArea">
+			<div class="QuestionArea">
+				<p class="TheQuestion">
+					<!--0-->In the week of "31/08/1963", which single was at number "66" in the Billboard Hot 100?<!--/0-->
+				</p>
+			</div>
+		
+			<div class="AnswerAreaMain">
+				<table>
+					<tr>
+						<td class="AnswerAreaLeft">
+							<div class="AnswerAreaLeftInner">
+								<p>1</p>
+							</div>
+						</td>
+						<td class="AnswerAreaMid">
+						</td>
+						<td class="AnswerAreaRight">
+							<p>
+								<!--1-->"A Walkin' Miracle" by "The Essex Featuring Anita Humes"<!--/1-->
+							</p>
+						</td>
+					</tr>
+				</table>
+			</div>
+		
+			<div class="AnswerAreaMain">
+				<table>
+					<tr>
+						<td class="AnswerAreaLeft">
+							<div class="AnswerAreaLeftInner">
+								<p>2</p>
+							</div>
+						</td>
+						<td class="AnswerAreaMid">
+						</td>
+						<td class="AnswerAreaRight">
+							<p>
+								<!--2-->"Detroit City" by "Bobby Bare"<!--/2-->
+							</p>
+						</td>
+					</tr>
+				</table>
+			</div>
+			
+			<div class="AnswerAreaMain">
+				<table>
+					<tr>
+						<td class="AnswerAreaLeft">
+							<div class="AnswerAreaLeftInner">
+								<p>3</p>
+							</div>
+						</td>
+						<td class="AnswerAreaMid">
+						</td>
+						<td class="AnswerAreaRight">
+							<p>
+								<!--3-->"Groovy Baby" by "Billy Abbott And The Jewels"<!--/3-->
+							</p>
+						</td>
+					</tr>
+				</table>
+			</div>
+			
+			<div class="LowerAreaInfo">
+				<p class="PlayingInfo">
+					<!--r0-->Vote in chat by saying !1, !2 or !3<!--/r0-->
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<!-- Results area -->
+<div id="MasterResultsContainer">
+	<div id="ResultsContainer">
+		<div id="BBHeader">
+			<p>BILLBOARD HOT 100 QUIZ BOT</p>
+		</div>
+		
+		<div class="QuizArea">
+			<div class="QuestionArea">
+				<p class="TheQuestion">
+					<!--r0-->In the week of "31/08/1963", which single was at number "66" in the Billboard Hot 100?<!--/r0-->
+				</p>
+			</div>
+		
+			<div id="TheAnswer1" class="AnswerAreaMain">
+				<table>
+					<tr>
+						<td class="ResultsAnswerAreaLeft">
+							<div class="ResultsAnswerAreaLeftInner">
+								<p>1</p>
+							</div>
+						</td>
+						<td class="ResultsAnswerAreaMid">
+						</td>
+						<td class="ResultsAnswerAreaRight">
+							<p>
+								<!--r1-->"A Walkin' Miracle" by "The Essex Featuring Anita Humes"<!--/r1-->
+							</p>
+						</td>
+					</tr>
+				</table>
+			</div>
+		
+			<div id="TheAnswer2" class="AnswerAreaMain">
+				<table>
+					<tr>
+						<td class="ResultsAnswerAreaLeft">
+							<div class="ResultsAnswerAreaLeftInner">
+								<p>2</p>
+							</div>
+						</td>
+						<td class="ResultsAnswerAreaMid">
+						</td>
+						<td class="ResultsAnswerAreaRight">
+							<p>
+								<!--r2-->"Detroit City" by "Bobby Bare"<!--/r2-->
+							</p>
+						</td>
+					</tr>
+				</table>
+			</div>
+
+			<div id="TheAnswer3" class="AnswerAreaMain">
+				<table>
+					<tr>
+						<td class="ResultsAnswerAreaLeft">
+							<div class="ResultsAnswerAreaLeftInner">
+								<p>3</p>
+							</div>
+						</td>
+						<td class="ResultsAnswerAreaMid">
+						</td>
+						<td class="ResultsAnswerAreaRight">
+							<p>
+								<!--r3-->"Groovy Baby" by "Billy Abbott And The Jewels"<!--/r3-->
+							</p>
+						</td>
+					</tr>
+				</table>
+			</div>
+			
+			<div class="LowerAreaResults">
+				<p>
+					<!--winstats-->0 out of 0 player(s) got it right<!--/winstats-->
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
