@@ -8,6 +8,8 @@ Can be adapted to any data set for any quiz but will require a lot of configurat
 
 I KNOW... that dynamically updating the HTML and CSS in the way I have is very bad. It was the simplest way I could think of without using a ton of external libraries. The idea is to keep these bots simple so an average streamer can figure them out.
 
+The Billboard Hot 100 data is apparently available from Billboard. They hang it out there. The first link I found was on some dodgy looking website, but the data seems to be correct. I validated a couple of entries. I've had to convert it from an insanely chaotic csv to a well ordered JSON. It's not sorted by date (ascending) and song ranks (ascending).
+
 Twitch doesn't fully support whispers, Mixer does. I created a new Twitch account and 3 days later I was still unable to send whispers. Apparently this is intentional as some form of anti-spam? It's ridiculous and greatly reduces the viability of this game. There's a Twitch script regardless.
 
 
@@ -81,27 +83,30 @@ CONFIGURATION:
 ==============
 Hopefully the comments in the code make some sense.
 
-Rarities are: common, rare, epic and legendary. It would take a bit of effort to expand or reduce these, but not much. You can add as many or as few items to the rewards arrays at the top of the script as you want:
-- CollectibleArrayCommon
-- CollectibleArrayRare
-- CollectibleArrayEpic
-- CollectibleArrayLegendary
+Mixer and Twitch script structures have been kept a lot clsoer in this project. This can become quite confusing to anyone who's not me. There are 4 files in each folder which...
 
-The chance of a particular rarity spawning are controlled by:
-- ChangeOfCommonSpawning
-- ChangeOfRareSpawning
-- ChangeOfEpicSpawning
-- ChangeOfLegendarySpawning
+- bb_quiz.js
+  -The node script you need to run
+  - Remember to open and change the 'replace_me' values to your details first!
+- Hot100.json
+  - The Billboard data file
+  - It's 336,524 lines long so brace yourself
+  - May be a good idea to strip out anything pre-1990 if you're worried about the ~20mb size
+- index.html
+  - The web page to render in OBS
+  - You don't need a web server:
+    - Add a new 'Browser' source
+    - Right-click it and open 'Properties'
+    - Check the 'Local file' box
+    - Point 'Local File' to the HTML
+    - It should be invisible until a game starts
+    - ...if the script is closed when a game is active, it may be visible but once the game is restarted it will immediately hide rpevious sessions
+  - This page refreshes every second and may cause a slight flash, but this was the simplest way I could find to trigger a refresh as OBS would (will) not pick up page changes without it
+- index.css
+  - CSS for the HTML
+  - Does what CSS does
+  
 
-The chance of a user winning one of the randomly picked items in one of these arrays is from 0 to 1:
-- ChangeOfCommonSpawning = n/a (100)
-- ChangeOfRareSpawning = 0.7;
-- ChangeOfEpicSpawning = 0.35;
-- ChangeOfLegendarySpawning = 0.15;
-
-The number of chances per spawn is set with 'DefaultChancesPerUser'. As noted in the script, this could be expanded to reward subscribers or followers with more attempts.
-
-Functions with 'setTimeout' control when the game starts and how long before the spawn stays active. There are 2 start points. The first is when the bot launches. This was a personal preference as I'd like it different than the global setting which is between 2 random numbers (spawn every 6 to 8 minutes).
 
 
 LIVE DEMO:
