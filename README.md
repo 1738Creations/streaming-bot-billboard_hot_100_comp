@@ -1,5 +1,5 @@
-Streaming Bot - Billboard Hot 100 Competition Bot (or poll bot)
-===============================================================
+Streaming Bot - Billboard Hot 100 Competition Bot
+=================================================
 A fully functioning competition chat bot. It reads from a JSON data file, randomly compiles from 1 of 3 possible question types, generates a random question and answers then starts. Competition is rendered in a local HTML file (no need for a web server) which can be rendered on an OBS stream.
 
 Every x minutes a competition triggers. Users have 3 possible answers to choose from. They select an answer in main chat by shouting !1, !2 or !3. Each player has 1 chance per question and can't change their answer.
@@ -9,6 +9,8 @@ Can be adapted to any data set for any quiz but will require a lot of configurat
 I KNOW... that dynamically updating the HTML and CSS in the way I have is very bad. It was the simplest way I could think of without using a ton of external libraries. The idea is to keep these bots simple so an average streamer can figure them out.
 
 The Billboard Hot 100 data is apparently available from Billboard. They hang it out there. The first link I found was on some dodgy looking website, but the data seems to be correct. I validated a couple of entries. I've had to convert it from an insanely chaotic csv to a well ordered JSON. It's not sorted by date (ascending) and song ranks (ascending).
+
+Could be adapted in to a poll bot but I wouldn't recommend it. I have another bot in the works for that.
 
 Twitch doesn't fully support whispers, Mixer does. I created a new Twitch account and 3 days later I was still unable to send whispers. Apparently this is intentional as some form of anti-spam? It's ridiculous and greatly reduces the viability of this game. There's a Twitch script regardless.
 
@@ -106,7 +108,14 @@ Mixer and Twitch script structures have been kept a lot clsoer in this project. 
   - CSS for the HTML
   - Does what CSS does
   
+The node script should be easy enough to follow with a lot of patience. I'm not a programmer.
 
+As mentioned at the top of this file, the HTML/CSS updating is not something you would put in to a paid production project. It's good enough for streaming games with friends and having a laugh. The HTML and CSS files are rewritten by the Node script when a competition triggers, shows results or ends. Anything relating to Java is vile and should not be used by anyone, ever. I didn't want to make ASP or PHP pages which are require additional learning from end users. So I went with HTML rewrites. How does that work?
+
+The CSS and HTML files have multi-line comments formed such as:
+- <!--1-->"Far Away" by "Nickelback"<!--/1-->
+
+...unintentional, that just happened to be the last question which was up! The Node script would look for the tage '<!--1-->' then '<!--/1-->' and replace anything between. Job done. It's not fantastically fast but the HTML and CSS are small so it's fast enough. A lot could be done to speed up the process or use fewer resources. Maybe that's something to look for in the future. Maybe this will convince someone to stop streaming, learn something then teach me!
 
 
 LIVE DEMO:
