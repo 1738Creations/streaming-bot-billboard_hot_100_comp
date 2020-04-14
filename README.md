@@ -85,7 +85,7 @@ CONFIGURATION:
 ==============
 Hopefully the comments in the code make some sense.
 
-Mixer and Twitch script structures have been kept a lot clsoer in this project. This can become quite confusing to anyone who's not me. There are 4 files in each folder which...
+Mixer and Twitch script structures have been kept a lot closer in this project. This can become quite confusing to anyone who's not me. There are 4 files in each folder which...
 
 - bb_quiz.js
   -The node script you need to run
