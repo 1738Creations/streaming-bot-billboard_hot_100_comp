@@ -12,6 +12,9 @@ The Billboard Hot 100 data is apparently available from Billboard. They hang it 
 
 Could be adapted in to a poll bot but I wouldn't recommend it. I have another bot in the works for that.
 
+There will be a slight flicker occasionally as the page refreshese. This could be mitigated by moving from a HTML page refresh to a JS page refresh with an iframe. I'm not including a demo of this for every project, but it can be seen here:
+- https://github.com/1738Creations/streaming-bot-catchemall/tree/master/With%20Overlay%20(js)
+
 Twitch doesn't fully support whispers, Mixer does. I created a new Twitch account and 3 days later I was still unable to send whispers. Apparently this is intentional as some form of anti-spam? It's ridiculous and greatly reduces the viability of this game. There's a Twitch script regardless.
 
 
